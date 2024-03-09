@@ -1,17 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react'
+import "../styles/faqPage.css"
 
 export default function FaqPage() {
-  return (// FAQ page made with tailwind css
+  const [showResults, setShowResults] = useState(false);
+
+  return (
     <>
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-bold text-center my-8">Frequently Asked Questions</h1>
         <div className="flex flex-col">
-          <div className="flex flex-col my-4">
+          <div className="flex flex-col my-4 questions" onClick={() => setShowResults(!showResults)}>
             <h2 className="text-2xl font-bold">What is the purpose of this website?</h2>
-            <p className="text-lg">This website was created to help people find the best deals on the internet. We have a team of people who are constantly searching for the best deals and updating the website with new deals every day.</p>
+            { showResults ? <Results /> : null }
           </div>
         </div>
       </div>
     </>
+  )
+}
+
+function Results() {
+  return (
+    <p className="text-lg">The purpose of this website is to provide a platform for people to share their experiences and learn from others. We believe that everyone has a story to tell and that everyone can learn from others.</p>
   )
 }
