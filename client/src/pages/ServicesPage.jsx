@@ -1,39 +1,42 @@
 import React, { useState } from 'react'
 import { FaArrowRight } from "react-icons/fa";
+import { FaArrowDown } from "react-icons/fa";
 import '../styles/servicesPage.css'
 
 export default function ServicesPage() {
+  const [toggle, setToggle] = useState(false);
+  const [toggle1, setToggle1] = useState(false);
+
   return (
-    <div class="page">
-      <PageTitle TitleName={"Nos service sont:"} />
-      <Intro Texte={"is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."}/>
-      <div class="Type-Service">
-      <TitreServices TitleName={"Website"} />
-        <div class='article'>
-          <div class='Card'><Card Title={"bonjour"} List0={"je"} List1={"suis"} List2={"thomas"} Price={30} /></div>
-          <div class='Card'><Card Title={"bonjour"} List0={"je"} List1={"suis"} List2={"thomas"} Price={30} /></div>
-          <div class='Card'><Card Title={"bonjour"} List0={"je"} List1={"suis"} List2={"thomas"} Price={30} /></div>
+    <div className="page">
+      <PageTitle TitleName={"Services"} />
+      <Intro Texte={"we offer different services on the blockchain.several prices for websites or service to implement a blockchain"}/>
+      <div className="Type-Service">
+      <TitreServices TitleName={"Website"} toggle={toggle} setToggle={setToggle} />
+      {toggle &&(
+        <div className='article'>
+          <div className='Card'><Card Title={"First"} List0={"je"}  Price={100} /></div>
+          <div className='Card'><Card Title={"Second"} List0={"je"} List1={"suis"}  Price={500} /></div>
+          <div className='Card'><Card Title={"Third"} List0={"je"} List1={"suis"} List2={"thomas"} Price={1000} /></div>
         </div>
+      )}
       </div>
-      <div class="Type-Service">
-      <TitreServices TitleName={"Blockshain"} />
-        <div class='article'>
-          <div class='Card'><Card Title={"bonjour"} List0={"je"} List1={"suis"} List2={"thomas"} Price={30} /></div>
-          <div class='Card'><Card Title={"bonjour"} List0={"je"} List1={"suis"} List2={"thomas"} Price={30} /></div>
-          <div class='Card'><Card Title={"bonjour"} List0={"je"} List1={"suis"} List2={"thomas"} Price={30} /></div>
+      <div className="Type-Service">
+      <TitreServices TitleName={"Blockshain"}  toggle={toggle1} setToggle={setToggle1}/>
+      {toggle1 &&(
+        <div className='article'>
+          <div className='Card'><Card Title={"Nft"} List0={"create a nft auto"}  Price={10} /></div>
+          <div className='Card'><Card Title={"Wallet"} List0={"create a wallet for you"}  Price={5} /></div>
         </div>
+        )}
       </div>
     </div>
   )
 }
-const showResult =() => {
-  return(
-    <p>bonjour</p>
-  )
-}
+
 const Intro = ({Texte})=>{
   return(
-    <p class="Intro">{Texte}</p>
+    <p className="Intro">{Texte}</p>
   )
 }
 
@@ -43,21 +46,33 @@ const PageTitle = ({TitleName}) => {
   )
   }
 
-const TitreServices = ({TitleName}) => {
+const TitreServices = ({TitleName, toggle, setToggle}) => {
+  const Click = (e) => {
+    e.preventDefault()
+    setToggle(!toggle);
+  };
+  function arrow (){
+    if (toggle){
+      return <FaArrowDown className=''/>
+    }
+    else{
+      return <FaArrowRight className=''/>
+    }
+  }
   return(
-    <button id="linkTitle" onclick={showResult}>{TitleName}<FaArrowRight className=''/></button>
+    <button id="linkTitle" onClick={Click}>{TitleName} {arrow()}</button>
   )
   }
 
-const Card = ({Price,Title,List0,List1,List2}) =>{
+const Card = ({Price,Title,List0=null,List1=null,List2=null}) =>{
   return(
-    <article>
-      <h2>{Title}</h2>
+    <article >
+      <h2 className='TitleCard'>{Title}</h2>
+      <p>price : {Price}$</p>
         <li>{List0}</li>
         <li>{List1}</li>
         <li>{List2}</li>
-      <p>price : {Price}$</p>
-      <button class="bouton">Lien</button>
+      <button className="bouton">Buy</button>
     </article>
   )
 }
