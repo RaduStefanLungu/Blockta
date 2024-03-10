@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import "../index.css";
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap');
+
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+html{
+    text-align: center;
+    display: flex;
+    align-items: center ;
+    justify-content: center ;
+    background-color: #1a1218;
+    font-family: Montserrat;
+}
+
+.auth-form-container, .register-form{
+    font-family: 'Sora', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    text-align: left !important;
+    padding: 0.25rem   0;
+    color: #ffffec;
+}
+input{
+    margin: 0.5rem 0;
+    padding: auto;
+    border-radius: 20px;
+    text-align: center;
+}
+    button{
+    border: none;
+    background-color: #ffffec;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.link-btn{
+    background: none;
+    color: #ffffec;
+    text-decoration: underline;
+    margin-top: 10%;
+
+
+}
+.big-title {
+    font-size: 4em !important; 
+    font-weight: bold !important;
+    text-align: left !important;
+    color: #ffffec !important; 
+    text-transform: uppercase;
+    padding:20px;
+    margin-top: 20%;
+    margin-bottom: 10%;
+    
+}
