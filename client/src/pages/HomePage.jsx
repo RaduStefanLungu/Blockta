@@ -9,7 +9,7 @@ export default function HomePage() {
     <div className='min-h-screen'>
 
 
-        <div className='text-[var(--color-secondary)]'>
+        {/* <div className='text-[var(--color-secondary)]'>
         
           <div id='user data belt' className='flex justify-center gap-20 py-5 border-b-[0.15rem] border-white font-montserrat'>
             <div className='flex gap-2'>
@@ -35,9 +35,9 @@ export default function HomePage() {
           </div>
 
 
-        </div>
+        </div> */}
 
-        {/* <Hero/> */}
+        <Hero/>
 
     </div>
   )
