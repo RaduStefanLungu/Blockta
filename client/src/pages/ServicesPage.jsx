@@ -15,9 +15,9 @@ export default function ServicesPage() {
       <TitreServices TitleName={"Website"} toggle={toggle} setToggle={setToggle} />
       {toggle &&(
         <div className='article'>
-          <div className='Card'><Card Title={"First"} List0={"je"}  Price={100} /></div>
-          <div className='Card'><Card Title={"Second"} List0={"je"} List1={"suis"}  Price={500} /></div>
-          <div className='Card'><Card Title={"Third"} List0={"je"} List1={"suis"} List2={"thomas"} Price={1000} /></div>
+          <div className='Card'><Card Title={"First"} Liste={["Navbar","Mobile version","footer"]} Price={100} /></div>
+          <div className='Card'><Card Title={"Second"}  Liste={["Navbar","Mobile version","footer","animation css","image"]} Price={500} /></div>
+          <div className='Card'><Card Title={"Third"}  Liste={["Navbar","Mobile version","footer","animation css","image","log page","contact page"]} Price={1000} /></div>
         </div>
       )}
       </div>
@@ -25,8 +25,8 @@ export default function ServicesPage() {
       <TitreServices TitleName={"Blockshain"}  toggle={toggle1} setToggle={setToggle1}/>
       {toggle1 &&(
         <div className='article'>
-          <div className='Card'><Card Title={"Nft"} List0={"create a nft auto"}  Price={10} /></div>
-          <div className='Card'><Card Title={"Wallet"} List0={"create a wallet for you"}  Price={5} /></div>
+          <div className='Card'><Card Title={"Nft"} Liste={["Creater a Nft for you"]} Price={10} /></div>
+          <div className='Card'><Card Title={"Wallet"} Liste={["Creater a wallet for you"]}  Price={5} /></div>
         </div>
         )}
       </div>
@@ -64,14 +64,18 @@ const TitreServices = ({TitleName, toggle, setToggle}) => {
   )
   }
 
-const Card = ({Price,Title,List0=null,List1=null,List2=null}) =>{
+const Card = ({Price,Title,Liste=[]}) =>{
   return(
     <article >
       <h2 className='TitleCard'>{Title}</h2>
       <p>price : {Price}$</p>
-        <li>{List0}</li>
-        <li>{List1}</li>
-        <li>{List2}</li>
+      <ul>
+        {Liste.map((value,key)=>{
+          return(
+            <li key={key}>{value}</li>
+          )
+        })}
+      </ul>
       <button className="bouton">Buy</button>
     </article>
   )
