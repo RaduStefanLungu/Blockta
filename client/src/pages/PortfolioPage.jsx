@@ -17,8 +17,8 @@ export default function PortfolioPage() {
     <div id="base">
       <h1 id="blc">Our <span>creations</span>, there you will find design, mockups, or previously implemented <span>projects</span></h1>
       <div id="contBlocks">
-        <BlocFolio  URL={logoT} Text={" testZone : an exemple of what it could look like fully functionnal"} isClickable={true} />
-        <BlocFolio URL={logo1} Text={"S-tract : a template of a smart contract website "} isClickable={false}/>
+        <BlocFolio  URL={logoT} Text={"Test Zone: an example of a fully functional demonstration."} isClickable={true} />
+        <BlocFolio URL={logo1} Text={"S-tract : Unlock the power of smart contracts. Create, deploy, and manage contracts effortlessly "} isClickable={false}/>
         <BlocFolio  URL={logo2}  Text={"WebTh : a template of a generic website with an easy design"} isClickable={false}/>
         <BlocFolio URL={logo3}  Text={"GraphTe : a template of a generic website"} isClickable={false}/>
         <BlocFolio URL={logo4}  Text={"Cooksta : a template of a generic cooking website"} isClickable={false}/>
