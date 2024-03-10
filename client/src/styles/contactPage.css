@@ -1,0 +1,77 @@
+html {
+    background: #1a1218;
+    color: #ffffec;
+}
+
+.contact_one{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 120px;
+    padding: 15px;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.contact{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border: 3px solid #1a1218;
+    border-radius: 40px 40px 12px 12px;
+    margin-right: 10px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.contact_bis{
+    text-align:center;
+    margin-bottom: 10px;
+}
+
+.contact_bis h1{
+    font-size: 40px;
+    /*color:#8fff51;*/
+}
+
+.contact_bis p{
+   /* color:#ff9ff1;*/
+}
+
+#email_sub{
+    color:#ffffec;
+}
+
+#button_sub{
+    border: 2px solid #1a1218;
+    border-radius: 40px;
+    width: 100px;
+}
+
+#formulaire > input{
+    border: 3px solid #1a1218;
+    border-radius: 10px;
+    background-color: transparent;
+    padding-left: 5px;
+    width: 350px;
+    margin: 10px;
+}
+
+#formulaire{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#formulaire *{
+    margin-right: 5px;
+    margin-bottom: 5px;
+
+}
+
+#message_sub{
+    padding-bottom: 100px;
+    align-items: start;
+}
