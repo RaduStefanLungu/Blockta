@@ -1,10 +1,13 @@
+html{
+    background-color: #1a1218;
+}
 #blc{
     color: #ffffec;
     background-clip: text;
     font-size: 50px;
     font-weight: bold;
-    margin-bottom: 30px;
-    margin-left: 45px;
+    padding-bottom: 30px;
+    padding-left: 45px;
 }
 
 #blc span{
@@ -12,10 +15,15 @@
 }
 
 #base {
-    background-color:#1a1218 ;
+    display: flex;
+    flex-direction: column;
+    
+    
+    height: fit-content;
     
 }
 
+/*
 #contBlocs {
     display: grid;
     row-gap: 30px;
@@ -30,6 +38,8 @@
     grid-column-gap: 20px;
     justify-content: center;
 }
+
+
 
 #item1 {
     grid-column: 1;
@@ -51,3 +61,59 @@
 img {
     border-radius: 20px;
 }
+*/
+
+/*
+////////////////////////////
+Flex part Thumbails related
+*/
+
+
+
+#container {
+    margin-top: 100px;
+    display: flex;
+    color: #ffffec;
+    flex-direction: column-reverse;
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 100%;
+    border: #ffffec solid 1px;
+    background-size:contain ;
+    /*background-image: url("../assets/portfolioBgImg/imdoxford2.jpg");*/
+
+}
+
+#subWork {
+    display: flex;
+    background-color: #1a1218c4;
+    padding-left: 5px;
+    height: 50px;
+    
+    
+}
+
+
+
+
+
+#container h1 {
+    border-right: #1a1218 solid 1px;
+}
+
+#contBlocks {
+    display: grid;
+    grid-template-columns: repeat(4,24%);
+    grid-template-rows: repeat(2,150px);
+    row-gap: 10px;
+    column-gap: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    
+    
+    
+    
+}
+

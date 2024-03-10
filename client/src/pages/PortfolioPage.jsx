@@ -1,34 +1,43 @@
 import React from 'react';
 import '../styles/portfolio.css';
+import logo from "../assets/portfolioBgImg/imdoxford2.jpg"
+import logo1 from "../assets/portfolioBgImg/logo1.jpg"
+import logo2 from "../assets/portfolioBgImg/logo2.jpg"
+import logo3 from "../assets/portfolioBgImg/logo3.jpg"
+import logo4 from "../assets/portfolioBgImg/logo1.jpg"
+import logo5 from "../assets/portfolioBgImg/logo1.jpg"
+
 
 export default function PortfolioPage() {
   return (
     <div id="base">
       <h1 id="blc">Our <span>creations</span>, there you will find design, mockups, or previously implemented <span>projects</span></h1>
-      <div id="contBlocs">
-        <BlocFolio Text={"endum odio mattis. Nulla facilisi. Nulla facilisis vehicula tellus. Morbi convallis ligula eget libero interdum, ut egestas velit dapibus. Donec eget arcu consectetur, pretium est ac, tempus odio. Vivamus sed risus tincidunt, sodales elit in, aliquam nulla. Vivamus rhoncus dapibus ex nec suscipit. Integer et massa tristique, varius libero eget, pharetra purus. Nunc sodales, mi sit amet gravida venenatis, sapien ipsum tristique nisl, et malesuada est magna at ex. Nam nec ligula eu purus rhoncus ultrices id sed est. Sed nec lorem id sem te"} URL={"https://thispersondoesnotexist.com/"} isLeft={true}/>
-        <BlocFolio Text={"endum odio mattis. Nulla facilisi. Nulla facilisis vehicula tellus. Morbi convallis ligula eget libero interdum, ut egestas velit dapibus. Donec eget arcu consectetur, pretium est ac, tempus odio. Vivamus sed risus tincidunt, sodales elit in, aliquam nulla. Vivamus rhoncus dapibus ex nec suscipit. Integer et massa tristique, varius libero eget, pharetra purus. Nunc sodales, mi sit amet gravida venenatis, sapien ipsum tristique nisl, et malesuada est magna at ex. Nam nec ligula eu purus rhoncus ultrices id sed est. Sed nec lorem id sem te"} URL={"https://thispersondoesnotexist.com/"} isLeft={false}/>
-        <BlocFolio Text={"endum odio mattis. Nulla facilisi. Nulla facilisis vehicula tellus. Morbi convallis ligula eget libero interdum, ut egestas velit dapibus. Donec eget arcu consectetur, pretium est ac, tempus odio. Vivamus sed risus tincidunt, sodales elit in, aliquam nulla. Vivamus rhoncus dapibus ex nec suscipit. Integer et massa tristique, varius libero eget, pharetra purus. Nunc sodales, mi sit amet gravida venenatis, sapien ipsum tristique nisl, et malesuada est magna at ex. Nam nec ligula eu purus rhoncus ultrices id sed est. Sed nec lorem id sem te"} URL={"https://thispersondoesnotexist.com/"} isLeft={true}/>
+      <div id="contBlocks">
+        <BlocFolio  URL={logo} Text={" BiBit : a template of a crypto game website"}  />
+        <BlocFolio URL={logo1} Text={"S-tract : a template of a smart contract website "} />
+        <BlocFolio  URL={logo2}  Text={"WebTh : a template of a generic website with an easy design"} />
+        <BlocFolio URL={logo3}  Text={"GraphTe : a template of a generic website"}/>
+        <BlocFolio URL={logo4}  Text={"S-tract : a template of a smart contract website"} />
+        <BlocFolio  URL={logo5}  Text={"S-tract : a template of a smart contract website"}/>
       </div>
     </div>
   );
 }
 
-const BlocFolio = ({ Text, URL, isLeft }) => {
-  if (isLeft) {
+const BlocFolio = ({Text, URL}) => {
+
+  
+  
     return (
-      <div id="container">
-        <img id="item1" src={URL} alt="Left Aligned Image"/>
-        <p id="item2">{Text}</p>
+      <div id="container"style={{ backgroundImage: `url(${URL})` }} >
+        
+        <div id="subWork" >
+         
+          <p id="item2">{Text}</p>
+        </div>
+        
       </div>
-    );
-  } else {
-    return (
-      <div id="container">
-        <img id="item3" src={URL} alt="Right Aligned Image"/>
-        <p id="item4">{Text}</p>
-      </div>
-    );
-  }
-}
+    )
+  } 
+
 
