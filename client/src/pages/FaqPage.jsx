@@ -21,46 +21,27 @@ export default function FaqPage() {
     );
   };
 
-  
+  const FaqItem = ({ question, comment }) => {
+    return (
+      <div className={`flex flex-col my-1 questions`} >
+        { Questions(question) }
+        { showResults ? <Results comment={comment} /> : null }
+        { showResults ? <FaChevronUp className='mx-auto my-auto text-xl icon' onClick={toggleResults}/> : <FaChevronDown className='mx-auto my-auto text-xl icon' onClick={toggleResults}/> }
+      </div>
+    );
+  };
+
   return (
     <>
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-bold text-center my-8">Frequently Asked Questions</h1>
-        <div className={`flex flex-col my-1 questions`} >
-          { Questions("What is this website about?") }
-          { showResults ? <Results comment="This website aims to..." /> : null }
-          { showResults ? <FaChevronUp className='mx-auto my-auto text-xl icon' onClick={toggleResults}/> : <FaChevronDown className='mx-auto my-auto text-xl icon' onClick={toggleResults}/> }
-        </div>
-
-        <div className={`flex flex-col my-1 questions`} >
-          { Questions("What is this website about?") }
-          { showResults ? <Results comment="This website aims to..." /> : null }
-          { showResults ? <FaChevronUp className='mx-auto my-auto text-xl icon' onClick={toggleResults}/> : <FaChevronDown className='mx-auto my-auto text-xl icon' onClick={toggleResults}/> }
-        </div>
-
-        <div className={`flex flex-col my-1 questions`} >
-          { Questions("What is this website about?") }
-          { showResults ? <Results comment="This website aims to..." /> : null }
-          { showResults ? <FaChevronUp className='mx-auto my-auto text-xl icon' onClick={toggleResults}/> : <FaChevronDown className='mx-auto my-auto text-xl icon' onClick={toggleResults}/> }
-        </div>
-
-        <div className={`flex flex-col my-1 questions`} >
-          { Questions("What is this website about?") }
-          { showResults ? <Results comment="This website aims to..." /> : null }
-          { showResults ? <FaChevronUp className='mx-auto my-auto text-xl icon' onClick={toggleResults}/> : <FaChevronDown className='mx-auto my-auto text-xl icon' onClick={toggleResults}/> }
-        </div>
-
-        <div className={`flex flex-col my-1 questions`} >
-          { Questions("What is this website about?") }
-          { showResults ? <Results comment="This website aims to..." /> : null }
-          { showResults ? <FaChevronUp className='mx-auto my-auto text-xl icon' onClick={toggleResults}/> : <FaChevronDown className='mx-auto my-auto text-xl icon' onClick={toggleResults}/> }
-        </div>
-
-        <div className={`flex flex-col my-1 questions`} >
-          { Questions("What is this website about?") }
-          { showResults ? <Results comment="This website aims to..." /> : null }
-          { showResults ? <FaChevronUp className='mx-auto my-auto text-xl icon' onClick={toggleResults}/> : <FaChevronDown className='mx-auto my-auto text-xl icon' onClick={toggleResults}/> }
-        </div>
+        
+        <FaqItem question="What is this website about?" comment="This website aims to..." />
+        <FaqItem question="What is this website about?" comment="This website aims to..." />
+        <FaqItem question="What is this website about?" comment="This website aims to..." />
+        <FaqItem question="What is this website about?" comment="This website aims to..." />
+        <FaqItem question="What is this website about?" comment="This website aims to..." />
+        <FaqItem question="What is this website about?" comment="This website aims to..." />
       </div>
     </>
   );
