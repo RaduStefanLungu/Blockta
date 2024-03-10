@@ -71,7 +71,7 @@ Flex part Thumbails related
 
 
 #container {
-    margin-top: 100px;
+    margin-top: 50px;
     display: flex;
     color: #ffffec;
     flex-direction: column-reverse;
@@ -79,10 +79,25 @@ Flex part Thumbails related
     border-radius: 20px;
     overflow: hidden;
     height: 100%;
-    border: #ffffec solid 1px;
+    border: #8eff516d solid 1px;
     background-size:contain ;
     /*background-image: url("../assets/portfolioBgImg/imdoxford2.jpg");*/
 
+}
+
+#containerC {
+    margin-top: 50px;
+    display: flex;
+    color: #ffffec;
+    flex-direction: column-reverse;
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 100%;
+    border: #8fff516d solid 1px;
+    background-size:contain ;
+    /*background-image: url("../assets/portfolioBgImg/imdoxford2.jpg");*/
+    
 }
 
 #subWork {
@@ -105,9 +120,9 @@ Flex part Thumbails related
 #contBlocks {
     display: grid;
     grid-template-columns: repeat(4,24%);
-    grid-template-rows: repeat(2,150px);
-    row-gap: 10px;
-    column-gap: 10px;
+    grid-template-rows: repeat(2,200px);
+    row-gap: 20px;
+    column-gap: 20px;
     margin-left: auto;
     margin-right: auto;
     
