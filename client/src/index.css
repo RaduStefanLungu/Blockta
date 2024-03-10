@@ -9,3 +9,20 @@
     --color-highlight-2: #ff9ff1;
 
   }
+
+  ::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    border-radius: 100vh;
+    background: #33252f;
+    margin: 15px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    height: 10%;
+    background: linear-gradient(#8fff51,#ffff7a,#ff9ff1);
+    border-radius: 10px;
+  }
+ 

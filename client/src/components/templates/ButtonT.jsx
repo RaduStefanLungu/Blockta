@@ -1,5 +1,4 @@
 import "../../styles/templates/ButtonT.css";
-
 function ButtonT (props) {
     return (
         <div>

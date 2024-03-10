@@ -1,6 +1,7 @@
 import ButtonT from './components/templates/ButtonT'
 import { Routes, Route, BrowserRouter} from 'react-router-dom'
 import HomePage from './pages/HomePage'
+import Objet from './components/templates/boubou'
 import ProgressBarT from './components/templates/ProgressBarT'
 
 function App() {
@@ -18,13 +19,16 @@ function App() {
         <Route path='/contact' element={<HomePage/>} />
 
       </Routes>
+
       <ButtonT content="Yoyo"/>
-      <ButtonT content="bouboubouboubou"/>
-      
       <ProgressBarT bar_w={80} barCont_w={40} barCont_h={30}/>
-      <ProgressBarT bar_w={20} barCont_w={40} barCont_h={30}/>
       
-      </BrowserRouter>
+      <ButtonT content="bouboubouboubou"/>
+      <ProgressBarT bar_w={20} barCont_w={40} barCont_h={30000}/>
+    
+    </BrowserRouter>
+
+      
   )
 }
 
