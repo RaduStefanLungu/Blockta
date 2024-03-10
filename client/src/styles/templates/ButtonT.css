@@ -1,0 +1,72 @@
+:root {
+    --color-primary: #1a1218;
+    --color-secondary: #ffffec;
+    --color-highlight-1: #8fff51;
+    --color-highlight-2: #ff9ff1;
+}
+
+body {
+    background-color: #1a1218;
+}
+
+.but {
+    font-weight: 600;
+    background-color: #1a1218;
+    position: relative;
+    color: var(--color-secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    padding: 7px 25px;
+    border-radius: 50px;
+    transition: all 0.8s; 
+}
+
+.but::before {
+    content: "";
+    position: absolute;
+    width: calc(100% + 5px);
+    height: calc(100% + 5px);
+    border-radius: 50px;
+    background: url("./img/gradient.png");
+    background-size: cover;
+    z-index: -1;
+}
+
+.but:hover {
+    transform: scale(1.1);
+    position: relative;
+    color:rgba(11, 12, 18, 0.7);
+    background: url("./img/gradient.png");
+    background-size: cover;
+}
+
+/*-----------------------------------------------*/
+
+.progress-container {
+    width: 50%;
+    height: 25px;
+    padding: 0 5px;
+    background-color: #1a1218;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    border-radius: 50px;
+    transition: all 0.8s; 
+    border: rgba(255, 255, 255, 0.1) 2px solid;
+}
+
+.bar {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    background: url("./img/gradient.png");
+    background-size: cover;
+    border-radius: 50px;
+    transition: all 0.8s; 
+}
+
+

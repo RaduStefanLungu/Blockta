@@ -1,4 +1,4 @@
-
+import ButtonT from './components/templates/ButtonT'
 import { Routes, Route, BrowserRouter} from 'react-router-dom'
 import HomePage from './pages/HomePage'
 import RegisterPage from './pages/RegisterPage'
