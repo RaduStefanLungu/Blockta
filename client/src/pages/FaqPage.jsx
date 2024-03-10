@@ -37,18 +37,20 @@ export default function FaqPage() {
     const toggleResult = () => toggleResults(index);
 
     return (
-      <div className={`flex flex-col my-1 questions`} >
-        <div className="question" onClick={toggleResult}>
-          { Questions(question, index) }
-          { isResultShown ? (
-            <FaChevronUp className='text-xl icon'/>
-          ) : (
-            <FaChevronDown className='text-xl icon'/>
-          )}
-        </div>
+      <div className='module-border-wrap'>
+        <div className={`flex flex-col questions`} >
+          <div className="question" onClick={toggleResult}>
+            { Questions(question, index) }
+            { isResultShown ? (
+              <FaChevronUp className='text-xl icon'/>
+            ) : (
+              <FaChevronDown className='text-xl icon'/>
+            )}
+          </div>
 
-        { isResultShown && <Results comment={comment} /> }
-        
+          { isResultShown && <Results comment={comment} /> }
+          
+        </div>
       </div>
     );
   };
@@ -57,12 +59,36 @@ export default function FaqPage() {
     <>
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-bold text-center my-8">Frequently Asked Questions</h1>        
-        <FaqItem question="What is this website about?" comment="This website aims to..." index={0} />
-        <FaqItem question="What is this website about?" comment="This website aims to..." index={1} />
-        <FaqItem question="What is this website about?" comment="This website aims to..." index={2} />
-        <FaqItem question="What is this website about?" comment="This website aims to..." index={3} />
-        <FaqItem question="What is this website about?" comment="This website aims to..." index={4} />
-        <FaqItem question="What is this website about?" comment="This website aims to..." index={5} />
+  <FaqItem
+  question="What services do you offer?"
+  comment="Our website offers a range of services for website designers, including custom website design, template customization, and website maintenance."
+  index={0}
+/>
+<FaqItem
+  question="How can I contact your team?"
+  comment="You can reach out to our team via email at contact@websitedesigners.com or through our contact form on the website."
+  index={1}
+/>
+<FaqItem
+  question="Do you provide website hosting?"
+  comment="While we do not provide hosting services directly, we can recommend reliable hosting providers based on your needs and budget."
+  index={2}
+/>
+<FaqItem
+  question="What platforms do you specialize in?"
+  comment="Our team specializes in designing websites on popular platforms such as WordPress, Shopify, and Squarespace."
+  index={3}
+/>
+<FaqItem
+  question="How long does it take to complete a website design project?"
+  comment="The timeline for a website design project depends on various factors, including the complexity of the design and the client's requirements. We typically provide an estimated timeline after discussing the project details with the client."
+  index={4}
+/>
+<FaqItem
+  question="Can you redesign an existing website?"
+  comment="Yes, we offer website redesign services to give your existing website a fresh and updated look while retaining its core functionality."
+  index={5}
+/>
       </div>
     </>
   );
